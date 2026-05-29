@@ -1,3 +1,6 @@
+/* ==========================================================================
+   CAMPOS DO FORMULÁRIO (INPUTS E SELECTS)
+   ========================================================================== */
 .fordform {
     display: block;
     width: 300px;
@@ -15,14 +18,15 @@ select.fordform {
     color: #807d7d;
 }
 
-input:focus-visible {
-    outline: none;
-}
-
+/* Remove a borda padrão de foco do navegador */
+input:focus-visible,
 select:focus-visible {
     outline: none;
 }
 
+/* ==========================================================================
+   ESTRUTURA E LAYOUT GERAL
+   ========================================================================== */
 main div {
     display: inline-block;
     vertical-align: top;
@@ -41,14 +45,88 @@ h2 {
     font-weight: 800;
 }
 
+.titulo {
+    margin-left: 8px;
+}
 
+/* Regra antiga mantida apenas para compatibilidade de outros botões, se houver */
 button {
     width: 200px;
     height: 40px;
     margin-right: 8px;
-    float: right;
 }
 
-.titulo {
-    margin-left: 8px;
+/* ==========================================================================
+   SEÇÃO LGPD (TEXTO E CHECKBOXES)
+   ========================================================================== */
+
+/* Ajuste fino no parágrafo explicativo da LGPD */
+.texto-lgpd {
+    max-width: 310px;        /* Alinha perfeitamente com a largura dos inputs */
+    font-size: 11px;
+    color: #666666;
+    text-align: left;
+    margin: 15px 8px;
+    line-height: 1.4;
+}
+
+/* Link dos Termos e Condições */
+.texto-lgpd a {
+    color: #1149c5;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Container que força o empilhamento vertical (um embaixo do outro) */
+.container-lgpd {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Mantém os checkboxes alinhados à esquerda */
+    gap: 12px;               /* Cria o espaçamento padrão entre as linhas */
+    margin-left: 8px;        /* Alinha horizontalmente com as caixas de texto */
+    max-width: 310px;
+}
+
+/* Garante que o quadrado (input) e o texto (label) fiquem lado a lado */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;                /* Espaço entre a caixinha e a frase */
+    text-align: left;
+    font-size: 13px;
+    color: #333333;
+}
+
+/* ==========================================================================
+   BOTÃO ENVIAR PERSONALIZADO (PADRÃO FORD)
+   ========================================================================== */
+.btn-ford {
+    background-color: #1149c5;      /* Azul oficial da identidade */
+    color: white;
+    border: none;
+    padding: 12px 0 !important;
+    border-radius: 25px !important; /* Visual arredondado idêntico ao modelo */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    
+    /* Centralização no fluxo do formulário */
+    float: none !important;         /* Cancela floats antigos que quebravam o layout */
+    align-self: center;             /* Move o botão para o centro da coluna */
+    width: 180px !important;        /* Proporção exata baseada na imagem */
+    height: 45px !important;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+/* Efeito Hover (Muda o tom do azul ao passar o mouse se estiver ativo) */
+.btn-ford:hover:not(:disabled) {
+    background-color: #0b338c;
+}
+
+/* Estado Desabilitado (Quando o usuário não aceitou os termos) */
+.btn-ford:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed;            /* Ícone de bloqueio no ponteiro do mouse */
 }

@@ -17,79 +17,67 @@
         </div>
         <nav>
             <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="lancamento.html">Lançamento</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lancamento.html">Lançamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-
     </header>
-<main>
 
-    <div class="forms">
+    <main>
+        <div class="forms">
+            <div>
+                <img src="img/xls 2.2 diesel.jpg" alt="Veículo Ford">
+            </div>
 
-        <div>
-            <img src="img/xls 2.2 diesel.jpg" alt="Veículo Ford">
+            <div>
+                <h2 class="titulo">Formulário de Contato</h2>
+
+                <form onsubmit="Post(this); return false;">
+
+                    <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+
+                    <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
+
+                    <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
+
+                    <select name="contato" class="fordform" required>
+                        <option value="">TIPO DE CONTATO</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="solicitacao">Solicitação</option>
+                    </select>
+
+                    <p class="texto-lgpd">
+                        Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.<br> 
+                        A qualquer momento, será possível editar ou remover tais dados. 
+                        <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a>
+                    </p>
+
+                    <div class="container-lgpd">
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="termos">
+                            <label for="termos">
+                                Sim. Li e concordo com os Termos e Condições
+                            </label>
+                        </div>
+
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="novidades"> 
+                            <label for="novidades">
+                                Sim. Também quero receber descontos e novidades.
+                            </label>
+                        </div>
+
+                        <button id="btnEnviar" class="btn-ford" disabled>Enviar</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
+    </main>
 
-        <div>
-
-            <h2 class="titulo">Formulário de Contato</h2>
-
-            <form onsubmit="Post(this); return false;">
-
-                <!-- NOME -->
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-
-                <!-- E-MAIL -->
-                <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-
-                <!-- TELEFONE -->
-                <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-
-                <!-- TIPO DE CONTATO -->
-                <select name="contato" class="fordform" required>
-                    <option value="">TIPO DE CONTATO</option>
-                    <option value="elogio">Elogio</option>
-                    <option value="reclamacao">Reclamação</option>
-                    <option value="solicitacao">Solicitação</option>
-                </select>
-
-        <p>
-            Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.<br> 
-            A qualquer momento, será possível editar ou remover tais dados. 
-            <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a>
-        </p>
-
-        <div class="checkbox">
-            <input type="checkbox" id="termos">
-            <label for="termos">
-                Sim. Li e concordo com os Termos e Condições
-            </label>
-        </div>
-
-        <div class="checkbox">
-            <input type="checkbox" id="novidades"> 
-            <label for="novidades">
-                Sim. Também quero receber descontos e novidades.
-            </label>
-        </div>
-
-        <button id="btnEnviar" disabled>Enviar</button>
-
-    </form>
-
-        </div>
-
-    </div>
-
-</main>
     <footer>
         <nav id="social">
             <ul>
@@ -100,7 +88,7 @@
             </ul>
         </nav>
         <div>
-           <img src="img/ford-96.png" width="70"  />
+           <img src="img/ford-96.png" width="70" />
         </div>
     </footer>    
 </body>
