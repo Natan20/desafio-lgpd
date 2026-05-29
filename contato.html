@@ -61,13 +61,29 @@
                     <option value="solicitacao">Solicitação</option>
                 </select>
 
-                <!-- MENSAGEM -->
-                <textarea name="mensagem" class="fordform" placeholder="MENSAGEM*" required></textarea>
+        <p>
+            Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.<br> 
+            A qualquer momento, será possível editar ou remover tais dados. 
+            <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a>
+        </p>
 
-                <!-- BOTÃO -->
-                <button type="submit" class="btn-enviar">Enviar</button>
+        <div class="checkbox">
+            <input type="checkbox" id="termos">
+            <label for="termos">
+                Sim. Li e concordo com os Termos e Condições
+            </label>
+        </div>
 
-            </form>
+        <div class="checkbox">
+            <input type="checkbox" id="novidades"> 
+            <label for="novidades">
+                Sim. Também quero receber descontos e novidades.
+            </label>
+        </div>
+
+        <button id="btnEnviar" disabled>Enviar</button>
+
+    </form>
 
         </div>
 
